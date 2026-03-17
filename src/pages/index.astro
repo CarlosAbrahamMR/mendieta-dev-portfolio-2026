@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 const title = "Carlos Mendieta | Frontend Portfolio";
 const description =
-  "Portfolio frontend en Astro + Tailwind + JavaScript. Rendimiento web, SEO tecnico, animaciones ligeras y cultura de producto.";
+  "Portfolio frontend en Astro + Tailwind + JavaScript. Proyectos reales en produccion, texto honesto y foco en rendimiento.";
 const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026/";
 ---
 
@@ -57,13 +57,13 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
       <div>
         <p class="kicker">Astro + Vanilla JS + Tailwind + CSS moderno</p>
         <h1 class="mt-2 text-4xl font-extrabold leading-tight md:text-6xl">
-          Una web rapida se siente.
-          <span class="text-mint">Y una buena experiencia se recuerda.</span>
+          Desarrollo frontend con enfoque en claridad, rendimiento y detalle.
+          <span class="text-mint">Sin humo: lo que ves aqui es lo que he construido.</span>
         </h1>
         <p class="mt-5 max-w-3xl text-ink/80">
-          Soy Carlos, frontend developer enfocado en rendimiento, claridad y detalle. Construyo
-          interfaces que cargan rapido, se ven cuidadas y se sostienen bien cuando crece el trafico.
-          Este portfolio esta pensado para mostrar trabajo real, no promesas.
+          Soy Carlos, desarrollador frontend junior. En este portfolio muestro proyectos reales, el
+          tipo de tareas que he hecho y los resultados que puedo explicar en entrevista. Todavia
+          estoy creciendo, pero trabajo con criterio tecnico y muchas ganas de mejorar.
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a
@@ -96,27 +96,28 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
     <section class="mt-10 grid gap-4 sm:grid-cols-3">
       <article class="soft-card reveal glass rounded-2xl p-4" data-delay="1">
         <p class="kicker text-sun">Focus</p>
-        <p class="mt-2 text-lg font-bold">Web Performance First</p>
-        <p class="mt-1 text-sm text-ink/75">LCP, CLS, tamano de bundle y carga bajo demanda.</p>
+        <p class="mt-2 text-lg font-bold">Rendimiento web practico</p>
+        <p class="mt-1 text-sm text-ink/75">Cuidar carga inicial, estabilidad visual y experiencia real.</p>
       </article>
       <article class="soft-card reveal glass rounded-2xl p-4" data-delay="2">
         <p class="kicker text-sun">Stack</p>
-        <p class="mt-2 text-lg font-bold">Astro + Tailwind</p>
-        <p class="mt-1 text-sm text-ink/75">Base ligera para landings y features con JS minimo.</p>
+        <p class="mt-2 text-lg font-bold">Astro + Tailwind + JS</p>
+        <p class="mt-1 text-sm text-ink/75">Base ligera para landings y componentes de frontend modernos.</p>
       </article>
       <article class="soft-card reveal glass rounded-2xl p-4" data-delay="3">
         <p class="kicker text-sun">Mindset</p>
-        <p class="mt-2 text-lg font-bold">Codigo + Producto</p>
-        <p class="mt-1 text-sm text-ink/75">Pienso en experiencia, negocio y mantenimiento.</p>
+        <p class="mt-2 text-lg font-bold">Aprendizaje constante</p>
+        <p class="mt-1 text-sm text-ink/75">Me gusta iterar, recibir feedback y subir el nivel en cada entrega.</p>
       </article>
     </section>
 
     <section id="proyectos" class="mt-20">
       <div class="reveal view-rise">
         <p class="kicker">Trabajo destacado</p>
-        <h2 class="section-title mt-2">Proyectos con impacto medible</h2>
+        <h2 class="section-title mt-2">Proyectos reales y descripcion honesta de mi rol</h2>
         <p class="mt-3 max-w-3xl text-ink/80">
-          Cada proyecto explica el contexto, mi rol y la mejora tecnica conseguida.
+          Comparto solo lo que puedo respaldar. Cuando un proyecto es privado, muestro enlaces
+          publicos y explico claramente que parte fue mi responsabilidad.
         </p>
       </div>
 
@@ -139,60 +140,79 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
       </div>
 
       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="astro performance seo" data-delay="1">
-          <p class="kicker text-mint">Landing de alto trafico</p>
-          <h3 class="mt-2 text-2xl font-bold">Fight Night Landing</h3>
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="react performance" data-delay="1">
+          <p class="kicker text-mint">Proyecto real en produccion</p>
+          <h3 class="mt-2 text-2xl font-bold">Sistema SIPE</h3>
           <p class="mt-3 text-sm text-ink/85">
-            <strong>Rol:</strong> Frontend lead en UI, optimizacion y configuracion SEO tecnica.
+            <strong>Rol:</strong> participe como practicante frontend/UI en mejoras de navegacion y
+            claridad visual. No desarrolle todo el sistema desde cero.
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Stack:</strong> Astro, JS vanilla, Tailwind, API endpoints.
+            <strong>Stack:</strong> frontend web con JavaScript, componentes de interfaz y consumo de APIs.
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Impacto:</strong> LCP 3.2s a 1.8s, JS inicial -41%, previews sociales consistentes.
+            <strong>Resultado:</strong> mejor lectura de pantallas clave y flujo de acceso mas claro.
           </p>
+          <div class="mt-4">
+            <a
+              class="rounded-full border border-mint/50 px-3 py-1.5 text-xs font-semibold text-mint hover:border-mint"
+              href="https://systemsipe.com/login"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver login en produccion
+            </a>
+          </div>
         </article>
 
-        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="react performance" data-delay="2">
-          <p class="kicker text-mint">Dashboard en crecimiento</p>
-          <h3 class="mt-2 text-2xl font-bold">SIPE UI Refresh</h3>
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="performance" data-delay="2">
+          <p class="kicker text-mint">Proyecto real en produccion</p>
+          <h3 class="mt-2 text-2xl font-bold">HK Donga Fleet Monitoring</h3>
           <p class="mt-3 text-sm text-ink/85">
-            <strong>Rol:</strong> Mejora de navegacion, accesibilidad y consistencia de interfaz.
+            <strong>Rol:</strong> apoyo en ajustes de interfaz y flujo de acceso para una plataforma
+            operativa en uso.
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Stack:</strong> React, Tailwind, APIs REST.
+            <strong>Stack:</strong> aplicacion web con formularios de login, frontend y conexion con backend existente.
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Impacto:</strong> UX mas fluida, mejor estado visual y componentes reutilizables.
+            <strong>Resultado:</strong> experiencia mas consistente en acceso y navegacion inicial.
           </p>
+          <div class="mt-4">
+            <a
+              class="rounded-full border border-mint/50 px-3 py-1.5 text-xs font-semibold text-mint hover:border-mint"
+              href="https://hk-donga.fleetmonitoring.online/log-in"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver login en produccion
+            </a>
+          </div>
         </article>
 
-        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="performance astro" data-delay="1">
-          <p class="kicker text-mint">Integracion operativa</p>
-          <h3 class="mt-2 text-2xl font-bold">Data Sync Engine</h3>
+        <article class="project project-card reveal glass rounded-2xl p-5 md:col-span-2" data-tags="astro seo performance" data-delay="1">
+          <p class="kicker text-mint">Proyecto personal</p>
+          <h3 class="mt-2 text-2xl font-bold">Este portfolio (Astro)</h3>
           <p class="mt-3 text-sm text-ink/85">
-            <strong>Rol:</strong> Integracion de webhooks y resiliencia de sincronizacion.
+            <strong>Rol:</strong> disenio y desarrollo completo del sitio para mostrar experiencia real
+            de forma clara.
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Stack:</strong> Node.js, webhooks, SQL/NoSQL, infraestructura AWS.
+            <strong>Stack:</strong> Astro, Tailwind, JavaScript, SEO tecnico (OG, Twitter Cards, canonical).
           </p>
           <p class="mt-1 text-sm text-ink/85">
-            <strong>Impacto:</strong> latencia de datos -60% y mejor estabilidad en picos.
+            <strong>Resultado:</strong> sitio ligero, responsive y mantenible para compartir en procesos de seleccion.
           </p>
-        </article>
-
-        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="seo performance" data-delay="2">
-          <p class="kicker text-mint">Calidad de publicacion</p>
-          <h3 class="mt-2 text-2xl font-bold">SEO + Share Health Kit</h3>
-          <p class="mt-3 text-sm text-ink/85">
-            <strong>Rol:</strong> Implementacion de OG, Twitter Cards y canonical de extremo a extremo.
-          </p>
-          <p class="mt-1 text-sm text-ink/85">
-            <strong>Stack:</strong> Astro metadata, JSON-LD, auditorias Lighthouse.
-          </p>
-          <p class="mt-1 text-sm text-ink/85">
-            <strong>Impacto:</strong> previews correctas y mejor descubribilidad organica.
-          </p>
+          <div class="mt-4">
+            <a
+              class="rounded-full border border-mint/50 px-3 py-1.5 text-xs font-semibold text-mint hover:border-mint"
+              href="https://github.com/CarlosAbrahamMR/mendieta-dev-portfolio-2026"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver codigo del portfolio
+            </a>
+          </div>
         </article>
       </div>
     </section>
