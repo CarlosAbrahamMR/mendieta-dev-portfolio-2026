@@ -1,0 +1,68 @@
+Carlos Abraham Mendieta Robledo
+Desarrollador Frontend Junior | Especialista en Rendimiento Web
++ Querétaro (Disponible 100% Teletrabajo)
+|
+# carlos.abraham2000@gmail.com
+|
+ +52 442 7845 110
+ï linkedin.com/in/carlosabrahammr
+|
+§ Portafolio GitHub
+RESUMEN PROFESIONAL
+Desarrollador Frontend con sólida experiencia práctica creando webs ultrarrápidas, optimizadas y preparadas
+para soportar picos de tráfico. Especializado en el ecosistema moderno (Astro, React, Tailwind) y en con-
+struir interfaces con una navegación extremadamente fluida.
+Acostumbrado a resolver problemas de forma
+creativa, disfrutar del pair programming y colaborar estrechamente en equipo para lograr resultados espectacu-
+lares. Contribuidor activo en proyectos Open Source con gran capacidad de adaptación y aprendizaje continuo.
+HABILIDADES TÉCNICAS
+W Frontend Core: Astro, React, JS (ES6+), Tail-
+wind CSS.
+W Rendimiento: Web Vitals, Lazy Loading, Caché.
+W Metodologías: Pair Programming, Git (Pull Re-
+quests), Scrum.
+W Backend/APIs: Node.js, REST APIs, Webhooks,
+JSON.
+W Infrastructure: AWS (EC2, S3), CI/CD, Docker.
+W Data: SQL, NoSQL, integraciones de flujo de datos.
+W Soft
+Skills:
+Resolución creativa,
+Trabajo en
+equipo.
+EXPERIENCIA PROFESIONAL
+Practicante de Frontend & UI | Proyecto SIPE
+Ago 2025
+Sistema de Gestión de Personal
+Remoto
+· Optimización de Interfaces: Colaboré activamente en la mejora del dashboard principal, elevando la
+usabilidad, accesibilidad y efectividad visual del producto.
+· Navegación Fluida: Apoyé en la implementación de interfaces interactivas y eficientes, garantizando una
+experiencia de usuario altamente responsiva e intuitiva.
+Practicante de Desarrollo y Automatización
+Oct 2024 – Presente
+Conexión Laboral del Bajío
+Remoto
+· High-Performance Architecture: Participé en el diseño de sistemas con Node.js y flujos automatizados,
+contribuyendo a una reducción del 60% en latencia de datos.
+· Estabilidad bajo demanda: Asistí en la optimización de flujos de información en tiempo real, ayudando
+a asegurar la disponibilidad del sistema durante periodos de alta carga.
+· Resolución Creativa: Apoyé en la implementación de integraciones vía Webhooks para sincronizar her-
+ramientas clave del equipo de forma eficiente.
+Practicante de Desarrollo Web
+Jul 2021 – Ago 2023
+Centro de Desarrollo UAQ
+Querétaro, MX
+· Fullstack Development: Colaboré en el desarrollo de interfaces front-end con JavaScript enfocadas en
+ofrecer la mejor experiencia de usuario sin sacrificar rendimiento.
+· Infrastructure: Asistí en la configuración de entornos en AWS preparados para soportar cargas de tráfico
+variables.
+EDUCACIÓN
+Licenciatura en Desarrollo de Software
+Dic 2024
+Universidad Autónoma de Querétaro
+Querétaro, MX
+IDIOMAS
+Español: Nativo
+|
+Inglés: Competencia Profesional (B2/C1)
