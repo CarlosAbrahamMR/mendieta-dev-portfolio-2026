@@ -1,38 +1,51 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-const title = "Carlos Mendieta | Frontend Portfolio (Astro)";
+const title = "Carlos Mendieta | Frontend Portfolio";
 const description =
-  "Portfolio tecnico en Astro + Tailwind + JavaScript: rendimiento web, SEO tecnico, CSS moderno y Open Source.";
-const canonical = "https://CarlosAbrahamMR.github.io/portfolio/";
+  "Portfolio frontend en Astro + Tailwind + JavaScript. Rendimiento web, SEO tecnico, animaciones ligeras y cultura de producto.";
+const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026/";
 ---
 
 <MainLayout title={title} description={description} canonical={canonical}>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Carlos Abraham Mendieta Robledo",
-      jobTitle: "Frontend Developer",
-      email: "mailto:carlos.abraham2000@gmail.com",
-      sameAs: ["https://github.com/CarlosAbrahamMR", "https://linkedin.com/in/carlosabrahammr"],
-      knowsAbout: ["Astro", "JavaScript", "Tailwind CSS", "Web Performance", "Technical SEO"]
-    })} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Carlos Abraham Mendieta Robledo",
+        jobTitle: "Frontend Developer",
+        email: "mailto:carlos.abraham2000@gmail.com",
+        sameAs: ["https://github.com/CarlosAbrahamMR", "https://linkedin.com/in/carlosabrahammr"],
+        knowsAbout: [
+          "Astro",
+          "JavaScript",
+          "Tailwind CSS",
+          "Web Performance",
+          "Technical SEO",
+          "Frontend Architecture"
+        ]
+      })}
+    />
   </Fragment>
 
-  <header class="sticky top-0 z-20 border-b border-stroke/70 bg-night/85 px-4 py-3 backdrop-blur">
+  <header class="sticky top-0 z-30 border-b border-stroke/70 bg-[#0a122d]/80 px-4 py-3 backdrop-blur">
     <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3">
-      <a href="#inicio" class="font-mono text-sm font-bold text-mint">CMR//AstroPortfolio</a>
-      <nav class="flex flex-wrap gap-4 text-sm text-ink/80">
-        <a href="#proyectos" class="hover:text-ink">Proyectos</a>
-        <a href="#senal" class="hover:text-ink">Senal tecnica</a>
-        <a href="#seo" class="hover:text-ink">SEO</a>
-        <a href="#contacto" class="hover:text-ink">Contacto</a>
+      <a href="#inicio" class="font-mono text-xs font-semibold tracking-widest text-mint">
+        CMR//CRAFTED-WEB
+      </a>
+      <nav class="flex flex-wrap items-center gap-4 text-sm text-ink/80">
+        <a class="hover:text-ink" href="#proyectos">Proyectos</a>
+        <a class="hover:text-ink" href="#proceso">Proceso</a>
+        <a class="hover:text-ink" href="#experiencia">Experiencia</a>
+        <a class="hover:text-ink" href="#senal">Senal tecnica</a>
+        <a class="hover:text-ink" href="#contacto">Contacto</a>
       </nav>
       <button
         id="flagToggle"
         type="button"
-        class="rounded-full border border-mint px-3 py-1.5 text-xs font-semibold text-mint"
+        class="cta-pulse rounded-full border border-mint/80 px-3 py-1.5 text-xs font-semibold text-mint"
       >
         Activar Hiring Mode
       </button>
@@ -40,98 +53,291 @@ const canonical = "https://CarlosAbrahamMR.github.io/portfolio/";
   </header>
 
   <main id="inicio" class="mx-auto w-[min(100%-2rem,72rem)] py-10">
-    <section class="scroll-reveal">
-      <p class="font-mono text-sm text-sun">Astro + Vanilla JS + HTML + CSS + Tailwind</p>
-      <h1 class="mt-2 text-4xl font-extrabold leading-tight md:text-6xl">
-        Frontend enfocado en rendimiento real y seleccion tecnica
-      </h1>
-      <p class="mt-4 max-w-3xl text-ink/80">
-        Portfolio disenado para demostrar lo que importa en procesos tipo La Velada: rol claro por
-        proyecto, stack concreto, decisiones de performance, SEO tecnico y contribuciones Open Source.
-      </p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a class="rounded-full bg-mint px-4 py-2 text-sm font-bold text-night" href="https://github.com/CarlosAbrahamMR" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="rounded-full border border-stroke px-4 py-2 text-sm font-bold text-ink" href="https://linkedin.com/in/carlosabrahammr" target="_blank" rel="noreferrer">LinkedIn</a>
+    <section class="reveal view-rise grid items-center gap-8 md:grid-cols-[1.3fr_1fr]">
+      <div>
+        <p class="kicker">Astro + Vanilla JS + Tailwind + CSS moderno</p>
+        <h1 class="mt-2 text-4xl font-extrabold leading-tight md:text-6xl">
+          Una web rapida se siente.
+          <span class="text-mint">Y una buena experiencia se recuerda.</span>
+        </h1>
+        <p class="mt-5 max-w-3xl text-ink/80">
+          Soy Carlos, frontend developer enfocado en rendimiento, claridad y detalle. Construyo
+          interfaces que cargan rapido, se ven cuidadas y se sostienen bien cuando crece el trafico.
+          Este portfolio esta pensado para mostrar trabajo real, no promesas.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a
+            class="rounded-full bg-mint px-4 py-2 text-sm font-bold text-night transition hover:translate-y-[-1px]"
+            href="https://github.com/CarlosAbrahamMR"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver GitHub
+          </a>
+          <a
+            class="rounded-full border border-stroke px-4 py-2 text-sm font-bold text-ink transition hover:border-mint/70"
+            href="https://linkedin.com/in/carlosabrahammr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Conectar en LinkedIn
+          </a>
+          <a
+            class="rounded-full border border-stroke px-4 py-2 text-sm font-bold text-ink transition hover:border-sun/70"
+            href="mailto:carlos.abraham2000@gmail.com"
+          >
+            Contacto directo
+          </a>
+        </div>
       </div>
+      <div class="hero-orb mx-auto w-full max-w-xs md:max-w-sm"></div>
     </section>
 
-    <section id="proyectos" class="scroll-reveal mt-16">
-      <div class="flex flex-wrap items-end justify-between gap-4">
-        <h2 class="text-3xl font-bold">Proyectos destacados</h2>
-        <div class="flex flex-wrap gap-2">
-          <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink is-active" data-filter="all">Todos</button>
-          <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="astro">Astro</button>
-          <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="performance">Performance</button>
-          <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="react">React</button>
-        </div>
+    <section class="mt-10 grid gap-4 sm:grid-cols-3">
+      <article class="soft-card reveal glass rounded-2xl p-4" data-delay="1">
+        <p class="kicker text-sun">Focus</p>
+        <p class="mt-2 text-lg font-bold">Web Performance First</p>
+        <p class="mt-1 text-sm text-ink/75">LCP, CLS, tamano de bundle y carga bajo demanda.</p>
+      </article>
+      <article class="soft-card reveal glass rounded-2xl p-4" data-delay="2">
+        <p class="kicker text-sun">Stack</p>
+        <p class="mt-2 text-lg font-bold">Astro + Tailwind</p>
+        <p class="mt-1 text-sm text-ink/75">Base ligera para landings y features con JS minimo.</p>
+      </article>
+      <article class="soft-card reveal glass rounded-2xl p-4" data-delay="3">
+        <p class="kicker text-sun">Mindset</p>
+        <p class="mt-2 text-lg font-bold">Codigo + Producto</p>
+        <p class="mt-1 text-sm text-ink/75">Pienso en experiencia, negocio y mantenimiento.</p>
+      </article>
+    </section>
+
+    <section id="proyectos" class="mt-20">
+      <div class="reveal view-rise">
+        <p class="kicker">Trabajo destacado</p>
+        <h2 class="section-title mt-2">Proyectos con impacto medible</h2>
+        <p class="mt-3 max-w-3xl text-ink/80">
+          Cada proyecto explica el contexto, mi rol y la mejora tecnica conseguida.
+        </p>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-2 reveal" data-delay="1">
+        <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink is-active bg-slate-700/50" data-filter="all">
+          Todos
+        </button>
+        <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="astro">
+          Astro
+        </button>
+        <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="performance">
+          Performance
+        </button>
+        <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="react">
+          React
+        </button>
+        <button class="chip rounded-full border border-stroke px-3 py-1 text-sm text-ink" data-filter="seo">
+          SEO
+        </button>
       </div>
 
       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <article class="project rounded-2xl border border-stroke bg-slate-900/50 p-5" data-tags="astro performance">
-          <p class="font-mono text-xs text-mint">Landing de alto trafico</p>
-          <h3 class="mt-2 text-xl font-bold">Fight Night Landing</h3>
-          <p class="mt-2 text-sm text-ink/80"><strong>Rol:</strong> Frontend principal (UI + optimizacion + SEO).</p>
-          <p class="mt-1 text-sm text-ink/80"><strong>Stack:</strong> Astro, JavaScript, Tailwind, endpoints API.</p>
-          <p class="mt-1 text-sm text-ink/80"><strong>Impacto:</strong> LCP 3.2s -> 1.8s y JS inicial -41%.</p>
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="astro performance seo" data-delay="1">
+          <p class="kicker text-mint">Landing de alto trafico</p>
+          <h3 class="mt-2 text-2xl font-bold">Fight Night Landing</h3>
+          <p class="mt-3 text-sm text-ink/85">
+            <strong>Rol:</strong> Frontend lead en UI, optimizacion y configuracion SEO tecnica.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Stack:</strong> Astro, JS vanilla, Tailwind, API endpoints.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Impacto:</strong> LCP 3.2s a 1.8s, JS inicial -41%, previews sociales consistentes.
+          </p>
         </article>
 
-        <article class="project rounded-2xl border border-stroke bg-slate-900/50 p-5" data-tags="react performance">
-          <p class="font-mono text-xs text-mint">Dashboard con datos vivos</p>
-          <h3 class="mt-2 text-xl font-bold">SIPE UI Refresh</h3>
-          <p class="mt-2 text-sm text-ink/80"><strong>Rol:</strong> Mejora de navegacion y accesibilidad.</p>
-          <p class="mt-1 text-sm text-ink/80"><strong>Stack:</strong> React, Tailwind, APIs REST.</p>
-          <p class="mt-1 text-sm text-ink/80"><strong>Impacto:</strong> UX mas fluida y componentes reutilizables.</p>
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="react performance" data-delay="2">
+          <p class="kicker text-mint">Dashboard en crecimiento</p>
+          <h3 class="mt-2 text-2xl font-bold">SIPE UI Refresh</h3>
+          <p class="mt-3 text-sm text-ink/85">
+            <strong>Rol:</strong> Mejora de navegacion, accesibilidad y consistencia de interfaz.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Stack:</strong> React, Tailwind, APIs REST.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Impacto:</strong> UX mas fluida, mejor estado visual y componentes reutilizables.
+          </p>
+        </article>
+
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="performance astro" data-delay="1">
+          <p class="kicker text-mint">Integracion operativa</p>
+          <h3 class="mt-2 text-2xl font-bold">Data Sync Engine</h3>
+          <p class="mt-3 text-sm text-ink/85">
+            <strong>Rol:</strong> Integracion de webhooks y resiliencia de sincronizacion.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Stack:</strong> Node.js, webhooks, SQL/NoSQL, infraestructura AWS.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Impacto:</strong> latencia de datos -60% y mejor estabilidad en picos.
+          </p>
+        </article>
+
+        <article class="project project-card reveal glass rounded-2xl p-5" data-tags="seo performance" data-delay="2">
+          <p class="kicker text-mint">Calidad de publicacion</p>
+          <h3 class="mt-2 text-2xl font-bold">SEO + Share Health Kit</h3>
+          <p class="mt-3 text-sm text-ink/85">
+            <strong>Rol:</strong> Implementacion de OG, Twitter Cards y canonical de extremo a extremo.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Stack:</strong> Astro metadata, JSON-LD, auditorias Lighthouse.
+          </p>
+          <p class="mt-1 text-sm text-ink/85">
+            <strong>Impacto:</strong> previews correctas y mejor descubribilidad organica.
+          </p>
         </article>
       </div>
     </section>
 
-    <section id="senal" class="scroll-reveal mt-16 grid gap-6 md:grid-cols-2">
-      <article class="rounded-2xl border border-stroke bg-slate-900/50 p-5">
-        <h2 class="text-2xl font-bold">CSS moderno > imagen pesada</h2>
+    <section id="proceso" class="mt-20">
+      <div class="reveal view-rise">
+        <p class="kicker">Forma de trabajo</p>
+        <h2 class="section-title mt-2">Como convierto ideas en una experiencia cuidada</h2>
+      </div>
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        <article class="soft-card reveal glass rounded-2xl p-5" data-delay="1">
+          <p class="kicker text-mint">01 Descubrir</p>
+          <p class="mt-2 text-lg font-bold">Objetivo y contexto primero</p>
+          <p class="mt-1 text-sm text-ink/80">
+            Defino que problema resolvemos, para quien y que metricas importan.
+          </p>
+        </article>
+        <article class="soft-card reveal glass rounded-2xl p-5" data-delay="2">
+          <p class="kicker text-mint">02 Prototipar</p>
+          <p class="mt-2 text-lg font-bold">UI con ritmo y jerarquia</p>
+          <p class="mt-1 text-sm text-ink/80">
+            Estructuro secciones, tono visual y comportamiento responsivo desde el inicio.
+          </p>
+        </article>
+        <article class="soft-card reveal glass rounded-2xl p-5" data-delay="1">
+          <p class="kicker text-mint">03 Optimizar</p>
+          <p class="mt-2 text-lg font-bold">Rendimiento como criterio</p>
+          <p class="mt-1 text-sm text-ink/80">
+            Reduzco peso, postergo carga no critica y cuido la navegacion percibida.
+          </p>
+        </article>
+        <article class="soft-card reveal glass rounded-2xl p-5" data-delay="2">
+          <p class="kicker text-mint">04 Publicar</p>
+          <p class="mt-2 text-lg font-bold">Deploy seguro y medible</p>
+          <p class="mt-1 text-sm text-ink/80">
+            Activo feature flags, valido SEO y dejo monitoreo para iterar rapido.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="mt-20">
+      <div class="reveal view-rise">
+        <p class="kicker">Recorrido</p>
+        <h2 class="section-title mt-2">Experiencia y evolucion</h2>
+      </div>
+      <div class="relative mt-6 pl-8">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <article class="reveal relative mb-8 flex gap-4" data-delay="1">
+          <span class="timeline-dot"></span>
+          <div class="glass soft-card w-full rounded-2xl p-5">
+            <p class="text-xs text-sun">Ago 2025</p>
+            <h3 class="text-xl font-bold">Practicante Frontend & UI - SIPE</h3>
+            <p class="mt-1 text-sm text-ink/80">
+              Mejora de dashboard y navegacion con enfoque en usabilidad, accesibilidad y claridad visual.
+            </p>
+          </div>
+        </article>
+
+        <article class="reveal relative mb-8 flex gap-4" data-delay="2">
+          <span class="timeline-dot"></span>
+          <div class="glass soft-card w-full rounded-2xl p-5">
+            <p class="text-xs text-sun">Oct 2024 - Presente</p>
+            <h3 class="text-xl font-bold">Practicante Desarrollo y Automatizacion</h3>
+            <p class="mt-1 text-sm text-ink/80">
+              Integraciones con webhooks y flujos de datos para mejorar estabilidad bajo carga.
+            </p>
+          </div>
+        </article>
+
+        <article class="reveal relative flex gap-4" data-delay="3">
+          <span class="timeline-dot"></span>
+          <div class="glass soft-card w-full rounded-2xl p-5">
+            <p class="text-xs text-sun">Jul 2021 - Ago 2023</p>
+            <h3 class="text-xl font-bold">Practicante Desarrollo Web - Centro de Desarrollo UAQ</h3>
+            <p class="mt-1 text-sm text-ink/80">
+              Trabajo fullstack, despliegues en AWS y mejoras de experiencia frontend.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="senal" class="mt-20 grid gap-4 md:grid-cols-2">
+      <article class="soft-card reveal view-rise glass rounded-2xl p-6">
+        <p class="kicker">CSS moderno</p>
+        <h2 class="section-title mt-2">Mas codigo, menos imagen pesada</h2>
         <p class="mt-3 text-sm text-ink/80">
-          Uso <code>mask-image + linear-gradient</code> para difuminar bordes y generar efectos
-          visuales programaticos sin depender de assets editados en Photoshop.
+          Uso <code>mask-image + linear-gradient</code> para crear bordes difuminados y efectos
+          visuales adaptables sin assets gigantes.
         </p>
         <div class="fighter-mask mt-4 h-44 w-full"></div>
       </article>
 
-      <article class="rounded-2xl border border-stroke bg-slate-900/50 p-5">
-        <h2 class="text-2xl font-bold">Animaciones ligeras</h2>
+      <article class="soft-card reveal view-rise glass rounded-2xl p-6" data-delay="1">
+        <p class="kicker">Animacion ligera</p>
+        <h2 class="section-title mt-2">Movimiento con intencion</h2>
         <p class="mt-3 text-sm text-ink/80">
-          Scroll-linked animations con View Timeline API en CSS, evitando librerias JS pesadas para
-          efectos de entrada de secciones.
+          Combino View Timeline API y animaciones suaves para guiar la lectura sin cargar JS pesado.
         </p>
-        <p class="mt-3 text-xs text-sun">
-          Nota: tambien integro utilidades de <code>@midudev/tailwind-animations</code> cuando el
-          proyecto las requiere.
-        </p>
+        <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-ink/80">
+          <li>Entrada por seccion con scroll.</li>
+          <li>Hover progresivo y feedback visual en cards.</li>
+          <li>Respeto por `prefers-reduced-motion`.</li>
+        </ul>
       </article>
     </section>
 
-    <section id="seo" class="scroll-reveal mt-16 rounded-2xl border border-stroke bg-slate-900/50 p-6">
-      <h2 class="text-3xl font-bold">SEO tecnico aplicado</h2>
-      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-ink/85">
-        <li>Open Graph completo para shares en redes.</li>
-        <li>Twitter Card `summary_large_image` correctamente configurada.</li>
-        <li>URL canonica para evitar contenido duplicado.</li>
-        <li>Schema.org Person en JSON-LD para enriquecer contexto semantico.</li>
-      </ul>
+    <section id="hiring-lab" class="reveal mt-20 hidden rounded-2xl border border-mint/70 bg-mint/10 p-6">
+      <p class="kicker text-mint">Feature Flag</p>
+      <h2 class="section-title mt-2 text-mint">Hiring Mode activo</h2>
+      <p class="mt-2 text-sm text-ink/85">
+        Este bloque aparece con <code>?ff=hiring</code> o desde el boton superior. Simula despliegues
+        continuos con funcionalidad oculta.
+      </p>
     </section>
 
-    <section id="hiring-lab" class="scroll-reveal mt-16 hidden rounded-2xl border border-mint/70 bg-mint/10 p-6">
-      <h2 class="text-2xl font-bold text-mint">Hiring Mode (Feature Flag)</h2>
-      <p class="mt-2 text-sm text-ink/85">
-        Este bloque se habilita con <code>?ff=hiring</code> o con el boton superior para simular
-        despliegues continuos con funcionalidad oculta.
-      </p>
+    <section id="contacto" class="reveal mt-20">
+      <div class="glass soft-card rounded-3xl p-7 md:p-10">
+        <p class="kicker">Cierre</p>
+        <h2 class="section-title mt-2">Gracias por llegar hasta aqui</h2>
+        <p class="mt-3 max-w-2xl text-ink/80">
+          Si buscas a alguien que combine criterio tecnico, velocidad de ejecucion y gusto por los
+          detalles, me encantara colaborar en tu equipo.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="rounded-full bg-mint px-4 py-2 text-sm font-bold text-night" href="mailto:carlos.abraham2000@gmail.com">
+            Escribeme por email
+          </a>
+          <a
+            class="rounded-full border border-stroke px-4 py-2 text-sm font-bold text-ink"
+            href="https://github.com/CarlosAbrahamMR"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Revisar repositorios
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer id="contacto" class="mx-auto mt-8 w-[min(100%-2rem,72rem)] border-t border-stroke py-8">
-    <p class="text-sm text-ink/80">Disponible para trabajo remoto frontend y colaboracion Open Source.</p>
-    <p class="mt-2 text-sm">
-      <a class="text-sun" href="mailto:carlos.abraham2000@gmail.com">carlos.abraham2000@gmail.com</a>
-    </p>
+  <footer class="mx-auto mt-10 w-[min(100%-2rem,72rem)] border-t border-stroke py-7 text-xs text-ink/60">
+    <p>&copy; {new Date().getFullYear()} Carlos Abraham Mendieta Robledo. Crafted with care.</p>
   </footer>
 
   <script is:inline>
@@ -141,19 +347,19 @@ const canonical = "https://CarlosAbrahamMR.github.io/portfolio/";
     const hiringLab = document.querySelector("#hiring-lab");
     const KEY = "portfolio_hiring_mode";
 
-    const applyFilter = (value) => {
+    const setFilter = (value) => {
       projects.forEach((project) => {
         const tags = project.dataset.tags || "";
-        const show = value === "all" || tags.includes(value);
-        project.style.display = show ? "block" : "none";
+        const match = value === "all" || tags.includes(value);
+        project.style.display = match ? "block" : "none";
       });
     };
 
     chips.forEach((chip) => {
       chip.addEventListener("click", () => {
-        chips.forEach((c) => c.classList.remove("is-active", "bg-slate-700"));
-        chip.classList.add("is-active", "bg-slate-700");
-        applyFilter(chip.dataset.filter);
+        chips.forEach((c) => c.classList.remove("is-active", "bg-slate-700/50"));
+        chip.classList.add("is-active", "bg-slate-700/50");
+        setFilter(chip.dataset.filter);
       });
     });
 
@@ -173,5 +379,21 @@ const canonical = "https://CarlosAbrahamMR.github.io/portfolio/";
       const current = localStorage.getItem(KEY) === "1";
       setHiringMode(!current);
     });
+
+    // Fallback reveal animation for browsers without View Timeline support.
+    const revealItems = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
   </script>
 </MainLayout>

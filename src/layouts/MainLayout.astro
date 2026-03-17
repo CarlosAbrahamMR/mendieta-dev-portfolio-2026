@@ -12,7 +12,7 @@ const {
   title,
   description,
   canonical,
-  ogImage = "https:///CarlosAbrahamMR.github.io/portfolio/og-cover.png"
+  ogImage = "https://CarlosAbrahamMR.github.io/portfolio/og-cover.png"
 } = Astro.props;
 ---
 
@@ -36,6 +36,12 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <slot name="head" />
   </head>
   <body>

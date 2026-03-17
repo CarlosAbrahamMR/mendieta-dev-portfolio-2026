@@ -2,12 +2,20 @@
 
 :root {
   color-scheme: dark;
+  --bg: #090f22;
+  --bg-2: #111a3f;
+  --ink: #dce6ff;
+  --muted: #9fb0e5;
+  --mint: #5be7c4;
+  --sun: #ffd86b;
+  --stroke: #2a3a78;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,8 +23,8 @@ body {
   background:
     radial-gradient(1200px 500px at 30% -10%, #1d2f72 0%, transparent 60%),
     radial-gradient(1200px 500px at 90% 20%, #245e58 0%, transparent 55%),
-    #090f22;
-  color: #dce6ff;
+    var(--bg);
+  color: var(--ink);
 }
 
 .bg-grid {
@@ -30,6 +38,62 @@ body {
   background-size: 24px 24px;
   mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
   z-index: -1;
+}
+
+.glass {
+  border: 1px solid color-mix(in srgb, var(--stroke) 85%, white 15%);
+  background: linear-gradient(145deg, rgba(10, 17, 42, 0.82), rgba(20, 34, 81, 0.7));
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sun);
+}
+
+.hero-orb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  border: 1px solid rgba(91, 231, 196, 0.4);
+  background:
+    radial-gradient(circle at 40% 30%, rgba(91, 231, 196, 0.55), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(255, 216, 107, 0.35), transparent 40%),
+    linear-gradient(160deg, rgba(24, 40, 96, 0.88), rgba(15, 25, 60, 0.88));
+  box-shadow:
+    0 0 0 1px rgba(42, 58, 120, 0.5) inset,
+    0 20px 80px rgba(13, 21, 52, 0.6);
+  overflow: hidden;
+}
+
+.hero-orb::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: conic-gradient(from 110deg, transparent 0%, rgba(91, 231, 196, 0.25) 22%, transparent 44%);
+  animation: spin 12s linear infinite;
+}
+
+.hero-orb::after {
+  content: "CMR";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: clamp(1.7rem, 7vw, 3rem);
+  color: rgba(220, 230, 255, 0.92);
+  letter-spacing: 0.08em;
 }
 
 .fighter-mask {
@@ -50,12 +114,102 @@ body {
   mask-image: linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%);
 }
 
-/* Scroll-linked animation using View Timeline API */
+.chip {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(91, 231, 196, 0.62);
+}
+
+.project-card,
+.soft-card {
+  position: relative;
+  transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.project-card:hover,
+.soft-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 231, 196, 0.5);
+  box-shadow: 0 14px 45px rgba(5, 11, 30, 0.6);
+}
+
+.project-card::after,
+.soft-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 25%,
+    rgba(91, 231, 196, 0.14) 40%,
+    rgba(255, 216, 107, 0.1) 58%,
+    transparent 74%
+  );
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.project-card:hover::after,
+.soft-card:hover::after {
+  opacity: 1;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0.55rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 2px;
+  background: linear-gradient(var(--mint), rgba(91, 231, 196, 0.1));
+}
+
+.timeline-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.27rem;
+  border-radius: 999px;
+  background: var(--mint);
+  box-shadow: 0 0 0 4px rgba(91, 231, 196, 0.15);
+}
+
+.cta-pulse {
+  animation: pulse-soft 2.8s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px) scale(0.98);
+  transition: opacity 560ms ease, transform 560ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal[data-delay="1"] {
+  transition-delay: 80ms;
+}
+
+.reveal[data-delay="2"] {
+  transition-delay: 160ms;
+}
+
+.reveal[data-delay="3"] {
+  transition-delay: 240ms;
+}
+
+/* Scroll-linked animation using View Timeline API where supported */
 @supports (animation-timeline: view()) {
-  .scroll-reveal {
-    opacity: 0.15;
-    transform: translateY(2.4rem) scale(0.98);
-    animation-name: card-enter;
+  .view-rise {
+    opacity: 0.08;
+    transform: translateY(32px) scale(0.98);
+    animation-name: view-rise;
     animation-duration: 1ms;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
@@ -64,9 +218,35 @@ body {
   }
 }
 
-@keyframes card-enter {
+@keyframes view-rise {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 231, 196, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(91, 231, 196, 0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
