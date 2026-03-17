@@ -42,13 +42,12 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
         <a class="hover:text-ink" href="#senal">Senal tecnica</a>
         <a class="hover:text-ink" href="#contacto">Contacto</a>
       </nav>
-      <button
-        id="flagToggle"
-        type="button"
-        class="cta-pulse rounded-full border border-mint/80 px-3 py-1.5 text-xs font-semibold text-mint"
+      <a
+        class="rounded-full border border-mint/80 px-3 py-1.5 text-xs font-semibold text-mint"
+        href="mailto:carlos.abraham2000@gmail.com"
       >
-        Activar Hiring Mode
-      </button>
+        Contacto
+      </a>
     </div>
   </header>
 
@@ -57,13 +56,13 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
       <div>
         <p class="kicker">Astro + Vanilla JS + Tailwind + CSS moderno</p>
         <h1 class="mt-2 text-4xl font-extrabold leading-tight md:text-6xl">
-          Desarrollo frontend con enfoque en claridad, rendimiento y detalle.
-          <span class="text-mint">Sin humo: lo que ves aqui es lo que he construido.</span>
+          Desarrollo frontend con enfoque en claridad, rendimiento y calidad de ejecucion.
+          <span class="text-mint">Este portafolio presenta proyectos reales y resultados verificables.</span>
         </h1>
         <p class="mt-5 max-w-3xl text-ink/80">
-          Soy Carlos, desarrollador frontend junior. En este portfolio muestro proyectos reales, el
-          tipo de tareas que he hecho y los resultados que puedo explicar en entrevista. Todavia
-          estoy creciendo, pero trabajo con criterio tecnico y muchas ganas de mejorar.
+          Soy Carlos Abraham Mendieta Robledo, desarrollador frontend junior. Aqui muestro
+          implementaciones en produccion, responsabilidades concretas y mejoras que puedo sustentar
+          tecnicamente en entrevista.
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a
@@ -322,15 +321,6 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
       </article>
     </section>
 
-    <section id="hiring-lab" class="reveal mt-20 hidden rounded-2xl border border-mint/70 bg-mint/10 p-6">
-      <p class="kicker text-mint">Feature Flag</p>
-      <h2 class="section-title mt-2 text-mint">Hiring Mode activo</h2>
-      <p class="mt-2 text-sm text-ink/85">
-        Este bloque aparece con <code>?ff=hiring</code> o desde el boton superior. Simula despliegues
-        continuos con funcionalidad oculta.
-      </p>
-    </section>
-
     <section id="contacto" class="reveal mt-20">
       <div class="glass soft-card rounded-3xl p-7 md:p-10">
         <p class="kicker">Cierre</p>
@@ -363,9 +353,6 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
   <script is:inline>
     const chips = document.querySelectorAll(".chip");
     const projects = document.querySelectorAll(".project");
-    const flagToggle = document.querySelector("#flagToggle");
-    const hiringLab = document.querySelector("#hiring-lab");
-    const KEY = "portfolio_hiring_mode";
 
     const setFilter = (value) => {
       projects.forEach((project) => {
@@ -381,23 +368,6 @@ const canonical = "https://CarlosAbrahamMR.github.io/mendieta-dev-portfolio-2026
         chip.classList.add("is-active", "bg-slate-700/50");
         setFilter(chip.dataset.filter);
       });
-    });
-
-    const setHiringMode = (enabled) => {
-      hiringLab?.classList.toggle("hidden", !enabled);
-      if (flagToggle) {
-        flagToggle.textContent = enabled ? "Desactivar Hiring Mode" : "Activar Hiring Mode";
-      }
-      localStorage.setItem(KEY, enabled ? "1" : "0");
-    };
-
-    const fromUrl = new URLSearchParams(window.location.search).get("ff") === "hiring";
-    const fromStorage = localStorage.getItem(KEY) === "1";
-    setHiringMode(fromUrl || fromStorage);
-
-    flagToggle?.addEventListener("click", () => {
-      const current = localStorage.getItem(KEY) === "1";
-      setHiringMode(!current);
     });
 
     // Fallback reveal animation for browsers without View Timeline support.
