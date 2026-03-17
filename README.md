@@ -60,3 +60,5 @@ npm run preview
 4. En GitHub ve a `Settings > Pages` y en `Source` selecciona `GitHub Actions`.
 5. Haz push a `main` y GitHub publicara automaticamente.
 6. URL final esperada: `https://TU-USUARIO.github.io/portfolio/`.
+
+Nota: en GitHub Actions, el `base` se ajusta automaticamente al nombre del repositorio para evitar rutas rotas.
